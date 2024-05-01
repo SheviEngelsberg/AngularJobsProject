@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../models/user'
 import { tap } from 'rxjs/operators';
+import { Router } from "@angular/router";
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import { tap } from 'rxjs/operators';
 })
 export class LoginService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router : Router) {}
 
   getUserByNameAndPassword(name?: string, password?: string): Observable<User | null> {
     return this.http.get<User>(`https://localhost:44337/api/User/GetUser/${name}/${password}`).pipe(
@@ -19,6 +20,7 @@ export class LoginService {
           alert('User not found');
         } else {
           localStorage.setItem('user', JSON.stringify(user));
+          this.router.navigate(['/jobs']);
         }
       })
     );
