@@ -2,7 +2,8 @@
     <h1>Login</h1>
     <form>
         <input type="text" placeholder="Enter your username" name="username" [(ngModel)]="username" required><br>
-        <input type="password" placeholder="Enter your password" name="password" [(ngModel)]="password" required><br>
+        <input type="password" placeholder="Enter your password" name="password" [(ngModel)]="password" required minlength="8" #password="ngModel"><br>
+        <div *ngIf="password.valid">hii</div>
         <input type="submit" value="Login" (click)="userExist()">
     </form>
 </div>
