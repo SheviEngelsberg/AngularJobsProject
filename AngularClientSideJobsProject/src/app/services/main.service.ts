@@ -22,7 +22,7 @@ export class MainService {
     const userString = localStorage.getItem('user');
     if (userString) {
       const userObj = JSON.parse(userString);
-      return JobFields[userObj.jobSearchField];
+      return "Search by: "+JobFields[userObj.jobSearchField];
     } else {
       return "";
     }
