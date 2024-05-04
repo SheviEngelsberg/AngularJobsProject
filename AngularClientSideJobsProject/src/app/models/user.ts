@@ -1,8 +1,9 @@
-import { JobFileds } from "./jobFileds"
+import { JobFields } from "./jobFields";
 
-export interface User{
-    id:number
-    userName:string
-    password:string
-    jobSeaarchFilesd:JobFileds
+
+export interface User {
+    id: number;
+    userName: string;
+    password: string;
+    jobSearchField: JobFields; 
 }

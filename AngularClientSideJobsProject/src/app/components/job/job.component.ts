@@ -1,15 +1,15 @@
-import { Component ,Input } from '@angular/core';
-import { Job } from '../../models/job'
+import { Component, Input } from '@angular/core';
+import { Job } from '../../models/job';
+import { JobFields } from '../../models/jobFields';
 
 @Component({
   selector: 'app-job',
-  standalone: true,
-  imports: [],
   templateUrl: './job.component.html',
   styleUrl: './job.component.scss'
 })
-
-
 export class JobComponent {
-  @Input('jobData') jobData : Job | null =null
+
+  @Input('jobData') jobData: Job | null = null;
+  JobFields: any= JobFields;
+
 }

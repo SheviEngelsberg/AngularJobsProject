@@ -1,10 +1,11 @@
-import { JobFileds } from "./jobFileds"
 
-export interface Job{
-    jobFileds:JobFileds
-    name:string
-    scopeOfHours:number
-    area:string
-    requirements:string
-    workingFromHome: boolean
+import { JobFields } from "./jobFields"
+
+export interface Job {
+    jobField: JobFields;
+    name: string;
+    scopeOfHours: number;
+    area: string;
+    requirements: string;
+    workingFromHome: boolean;
 }

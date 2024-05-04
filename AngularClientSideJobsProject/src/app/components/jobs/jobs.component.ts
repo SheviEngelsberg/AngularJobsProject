@@ -23,8 +23,7 @@ export class JobsComponent implements OnInit {
       },
       (error) => {
         console.error('Error fetching jobs:', error);
-        // Handle the error here, e.g. set a default jobsList or show an error message
-        this.jobsList = []; // Setting an empty array as default
+        this.jobsList = []; 
       }
     );
   }

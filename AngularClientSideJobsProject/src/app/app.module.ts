@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { CommonModule } from '@angular/common';
-import { HttpClient as CustomHttpClient, provideHttpClient } from '@angular/common/http';
+import { JobComponent } from './components/job/job.component';
 
 
 @NgModule({
@@ -17,7 +17,8 @@ import { HttpClient as CustomHttpClient, provideHttpClient } from '@angular/comm
     AppComponent,
     LoginComponent,
     MainComponentComponent,
-    JobsComponent
+    JobsComponent,
+    JobComponent
 
   ],
   imports: [
