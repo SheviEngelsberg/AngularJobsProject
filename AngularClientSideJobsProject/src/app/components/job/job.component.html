@@ -1,6 +1,12 @@
-<div>{{ jobData!.name }}</div>
+<div>job title: {{ jobData!.name }}</div>
+<div>job field: {{jobData!.jobField ? JobFields[jobData!.jobField] : '' }}</div>
 <div>Scope of Hours: {{ jobData!.scopeOfHours }}</div>
 <div>Area: {{ jobData!.area }}</div>
-<div>Requirements: {{ jobData!.requirements }}</div>
-<div>Working From Home: {{ jobData!.workingFromHome ? 'Yes' : 'No' }}</div>
-<div>Job Field: {{jobData!.jobField ? JobFields[jobData!.jobField] : '' }}</div>
+<div *ngIf="!showDetails"><button (click)="ShowDetails() ">Show details</button></div>
+<div *ngIf="showDetails">
+    <button (click)="ShowDetails() ">Hide details</button>
+    <div>Requirements: {{jobData!.requirements}}</div>
+    <div>WorkingFromHome: {{jobData!.workingFromHome}}</div>
+</div>
+<button type="button">Send CV</button>
+

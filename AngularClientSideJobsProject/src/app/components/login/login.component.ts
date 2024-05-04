@@ -15,7 +15,6 @@ export class LoginComponent {
   user?: User
 
   userExist(): void {
-    this.loginService.getUserByNameAndPassword(this.username, this.password)
-      .subscribe();
+    this.loginService.getUserByNameAndPassword(this.username, this.password).subscribe();
   }
 }

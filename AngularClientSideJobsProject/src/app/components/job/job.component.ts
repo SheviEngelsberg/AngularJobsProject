@@ -11,5 +11,9 @@ export class JobComponent {
 
   @Input('jobData') jobData: Job | null = null;
   JobFields: any= JobFields;
+  showDetails: boolean =false;
 
+  ShowDetails(){
+    this.showDetails=!this.showDetails;
+  }
 }
