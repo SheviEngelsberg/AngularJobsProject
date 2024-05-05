@@ -27,4 +27,11 @@ export class MainService {
       return "";
     }
   }
+
+  isUserLoggedIn()
+  {
+    const userString = localStorage.getItem('user');
+    return !!userString;
+  }
+  
 }

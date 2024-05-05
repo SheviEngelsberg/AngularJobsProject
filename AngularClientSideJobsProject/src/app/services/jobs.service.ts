@@ -15,18 +15,6 @@ export class JobsService {
 
   }
 
-//   getUserByNameAndPassword(name?: string, password?: string): Observable<User | null> {
-//     return this.http.get<User>(`https://localhost:44337/api/User/GetUser/${name}/${password}`).pipe(
-//       tap((user: User | null) => {
-//         if (user === null) {
-//           alert('User not found');
-//         } else {
-//           localStorage.setItem('user', JSON.stringify(user));
-//           this.router.navigate(['/jobs']);
-//         }
-//       })
-//     );
-//   }
-// }
+
 
 }
