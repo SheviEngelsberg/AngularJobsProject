@@ -10,7 +10,8 @@ import { RouterModule } from '@angular/router';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { CommonModule } from '@angular/common';
 import { JobComponent } from './components/job/job.component';
-
+import { FilterComponent } from './components/filter/filter.component';
+import { JobPageComponent } from './components/job-page/job-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { JobComponent } from './components/job/job.component';
     LoginComponent,
     MainComponentComponent,
     JobsComponent,
-    JobComponent
+    JobComponent,
+    FilterComponent,
+    JobPageComponent
 
   ],
   imports: [
@@ -28,8 +31,6 @@ import { JobComponent } from './components/job/job.component';
     HttpClientModule,
     RouterModule,
     CommonModule
-
-
   ],
   providers: [
     provideClientHydration(),
@@ -37,5 +38,4 @@ import { JobComponent } from './components/job/job.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { 
-
 }

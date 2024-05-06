@@ -19,8 +19,12 @@ export class LoginService {
         if (user === null) {
           alert('User not found');
         } else {
-          localStorage.setItem('user', JSON.stringify(user));
-          this.router.navigate(['/jobs']);
+          if (typeof localStorage !== 'undefined') {
+            localStorage.setItem('user', JSON.stringify(user));
+            this.router.navigate(['/jobs']);
+          } else {
+            alert("local srorage is not valid")
+          }
         }
       })
     );

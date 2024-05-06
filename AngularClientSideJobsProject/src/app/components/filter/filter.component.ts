@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
-  standalone: true,
-  imports: [],
   templateUrl: './filter.component.html',
-  styleUrl: './filter.component.scss'
+  styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent {
+  area: string | undefined;
+  field: string | undefined;
 
+  @Output() filterChange: EventEmitter<any> = new EventEmitter<any>();
+
+  filter() {
+    this.filterChange.emit({ area: this.area, field: this.field });
+  }
 }

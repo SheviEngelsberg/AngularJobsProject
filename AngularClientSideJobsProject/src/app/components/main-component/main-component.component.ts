@@ -31,5 +31,6 @@ export class MainComponentComponent implements OnInit {
   userIsLoggedIn(): boolean{
     return this.mainService.isUserLoggedIn();
   }
-  
 }
+
+
