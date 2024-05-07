@@ -4,10 +4,10 @@
         <h1 >hello {{getUserName()}}</h1>
       </li>
       <li>
-        <a href="">{{getJobField()}}</a>
+        <a [routerLink]="['/jobs', getJobField()]">Search by: {{ getJobField() }}</a>
       </li>
       <li>
-        <h2>count of CV you send: 0</h2>
+        <h2>count of CV you send: {{numOfCV}}</h2>
       </li>
       <li>
         <a [routerLink]="'/login'"><img src="../../../assets/אימוגי.jpg" alt=""></a>

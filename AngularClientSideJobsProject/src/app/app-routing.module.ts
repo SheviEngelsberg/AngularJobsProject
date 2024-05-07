@@ -5,7 +5,9 @@ import { JobPageComponent } from './components/job-page/job-page.component';
 
 const routes: Routes = [
   {path: "login", component: LoginComponent},
-  {path: "jobs", component: JobPageComponent}
+  {path: "jobs", component: JobPageComponent},
+  {path: "jobs/:field" , component: JobPageComponent }
+
 ];
 
 @NgModule({

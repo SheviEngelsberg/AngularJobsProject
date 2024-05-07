@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Job } from '../models/job';
 import { JobFields } from '../models/jobFields';
-import { Observable, filter, map, shareReplay } from 'rxjs';
+import { map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -27,7 +27,7 @@ export class JobsService {
   public filterJobs(area: string | null, field: string | null): Job[] {
     let f = this.jobList.filter(j =>
       (area == null || area == '' || j.area == area) &&
-      (field == null || field == '' || JobFields[j.jobField] == field))
+      (field == null || field == '' || JobFields[j.jobField] === field ))
    return f;
   }
 

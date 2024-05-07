@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Job } from '../../models/job';
 import { JobsService } from '../../services/jobs.service';
 import { tap } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-job-page',
@@ -9,13 +10,26 @@ import { tap } from 'rxjs';
   styleUrls: ['./job-page.component.scss'] 
 })
 export class JobPageComponent implements OnInit {
-  constructor(private jobsService:JobsService){}
+  constructor(private route: ActivatedRoute, private jobsService: JobsService) {}
   
   ngOnInit(): void {
-    this.jobsService.getJobsFromServer().subscribe(() => this.jobListToView = this.jobsService.jobList);
+    this.jobsService.getJobsFromServer().subscribe(jobs => {
+      this.jobListToView = jobs;
+      
+      // Subscribe to route parameter changes
+      this.route.paramMap.subscribe(params => {
+        const field = params.get('field');
+        if (field) {
+          this.filterDetails = { area: null, field };
+          this.Filter();
+        }
+      });
+    });
   }
 
+
   jobListToView:Job[] =[]
+  jobsSentCV: string[] = [];
 
   filterDetails:any = null
 

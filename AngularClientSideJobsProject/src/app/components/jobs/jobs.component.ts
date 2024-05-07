@@ -7,5 +7,16 @@ import { Job } from '../../models/job';
   styleUrls: ['./jobs.component.scss']
 })
 export class JobsComponent {
+
   @Input() jobsList: Job[] = [];
+  @Input() CVList: Job[]=[]
+  showCVList: boolean = false;
+
+  jobCV($event:any){
+    this.CVList.push($event)
+  }
+
+  ShowCVList(){
+    this.showCVList=!this.showCVList;
+  }
 }
