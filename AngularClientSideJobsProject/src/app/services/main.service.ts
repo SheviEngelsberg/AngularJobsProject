@@ -32,7 +32,7 @@ export class MainService {
       return "";
     }
   }
-
+  
   isUserLoggedIn() {
     try {
       const userString = localStorage.getItem('user');
@@ -41,10 +41,6 @@ export class MainService {
       return false;
     }
   }
-
-  // getCountOfCV(){
-  //   return 
-  // }
 
 
 }

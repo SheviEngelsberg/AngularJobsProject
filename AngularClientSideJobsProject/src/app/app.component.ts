@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'final_project_client';
+  isUserLoggedIn() {
+    try {
+      const userString = localStorage.getItem('user');
+      return !!userString;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  
 }

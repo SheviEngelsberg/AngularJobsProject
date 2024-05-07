@@ -5,7 +5,6 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class JobService {
-  // jobsSentCV : string[] =[]
 
   private cvCountSubject = new BehaviorSubject<number>(0);
   cvCount = this.cvCountSubject.asObservable();

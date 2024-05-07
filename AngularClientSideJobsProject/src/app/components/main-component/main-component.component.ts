@@ -18,7 +18,9 @@ export class MainComponentComponent implements OnInit {
   ngOnInit() {
     if (this.userIsLoggedIn()) {
       this.router.navigate(['/jobs']);
-    } else {
+    }
+
+    else {
       this.router.navigate(['/login']);
     }
 
