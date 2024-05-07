@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { JobComponent } from './components/job/job.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { JobPageComponent } from './components/job-page/job-page.component';
+import { RedColorDirective } from './directive/red-color.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { JobPageComponent } from './components/job-page/job-page.component';
     JobsComponent,
     JobComponent,
     FilterComponent,
-    JobPageComponent
+    JobPageComponent,
+    RedColorDirective
 
   ],
   imports: [
