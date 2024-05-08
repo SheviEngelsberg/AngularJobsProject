@@ -11,8 +11,20 @@ header {
   /* Text color of the header */
   padding: 10px 20px;
   /* Padding inside the header */
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+#loginImg{
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border-radius: 50%;
+}
 header ul {
   display: flex;
   /* Use flexbox */
@@ -26,6 +38,8 @@ header ul {
   /* Removes default margin */
   padding: 0;
   /* Removes default padding */
+  width: 60%;
+
 }
 
 header a {
