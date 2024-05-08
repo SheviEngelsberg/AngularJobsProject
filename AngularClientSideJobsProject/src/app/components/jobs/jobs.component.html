@@ -1,4 +1,4 @@
-<button (click)="ShowCVList()">
+<button appBackground (click)="ShowCVList()">
   {{ showCVList ? "Come back to the jobs list" : "List of resumes you sent" }}
 </button>
 <div *ngIf="!showCVList">

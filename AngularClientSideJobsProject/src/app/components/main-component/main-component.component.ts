@@ -37,6 +37,10 @@ export class MainComponentComponent implements OnInit {
   userIsLoggedIn(): boolean {
     return this.mainService.isUserLoggedIn();
   }
+  getEmail() : string
+  {
+    return "searchJobs1234@gmail.com"
+  }
 
 }
 

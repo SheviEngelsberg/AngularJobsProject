@@ -13,6 +13,7 @@ import { JobComponent } from './components/job/job.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { JobPageComponent } from './components/job-page/job-page.component';
 import { RedColorDirective } from './directive/red-color.directive';
+import { BackgroundDirective } from './directive/background.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RedColorDirective } from './directive/red-color.directive';
     JobComponent,
     FilterComponent,
     JobPageComponent,
-    RedColorDirective
+    RedColorDirective,
+    BackgroundDirective
 
   ],
   imports: [
